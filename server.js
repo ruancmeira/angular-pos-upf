@@ -1,7 +1,6 @@
 //Install express server
 const express = require('express');
 const path = require('path');
-console.log(__dirname + '/src/index.html');
 const app = express();
 
 // Serve only the static files form the directory

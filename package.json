@@ -3,11 +3,12 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --aot -prod"
   },
   "private": true,
   "dependencies": {
@@ -29,12 +30,17 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.22",
-    "@angular/cli": "~8.3.22",
-    "@angular/compiler-cli": "~8.2.14",
+    "@angular/cli": "^8.3.22",
+    "@angular/compiler-cli": "^8.2.14",
     "@angular/language-service": "~8.2.14",
     "@types/node": "~8.9.4",
+    "enhanced-resolve": "^4.1.1",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
+  },
+  "engines": {
+    "node": "12.14.0",
+    "npm": "6.13.4"
   }
 }
